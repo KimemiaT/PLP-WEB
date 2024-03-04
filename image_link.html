@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracey Nduta - Portfolio</title>
+    <style>
+        body {
+            background-color: black;
+            color: #FFD700;
+            font-family: 'Itim', cursive;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FFD700;
+            padding: 2px;
+            text-align: center;
+        }
+
+        nav {
+            text-align: right;
+            background-color: #FFD700;
+            height: 19px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-item {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            padding: 15px 15px;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: #FFD700;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        main {
+            text-align: center;
+            padding: 50px;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        p {
+            font-size: 4vw;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #FFD700;
+            color: black;
+            padding: 20px;
+            font-size: 25px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Additional styles for the gallery */
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .gallery-card {
+            flex-basis: calc(50% - 20px);
+            margin: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Additional styles for the menu */
+        .menu {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .menu-item {
+            margin-bottom: 15px;
+        }
+
+        .menu-item img {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome</h1>
+    </header>
+
+    <nav>
+        <div class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+        </div>
+        <div class="nav-item">
+            <a href="#gallery" class="nav-link">Gallery</a>
+        </div>
+        <div class="nav-item">
+            <a href="#menu" class="nav-link">Menu</a>
+        </div>
+    </nav>
+
+    <main>
+        <p>Hello. Welcome to the home of images!</p>
+        <button onclick="location.href='#gallery'"><b>View Gallery</b></button>
+    </main>
+<hr>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>GALLERY</h2>
+
+        <div class="gallery-card">
+            <img src="../../Music/PLP-WEB/images/birds.jpeg" alt="birds">
+        </div>
+        <div class="gallery-card">
+            <img src="../../Music/PLP-WEB/images/mountains.jpeg" alt="mountains">
+        </div>
+        <div class="gallery-card">
+            <img src="../../Music/PLP-WEB/images/lake.jpeg" alt="lake">
+        </div>
+        <div class="gallery-card">
+            <img src="../../Music/PLP-WEB/images/tree.jpeg" alt="tree">
+        </div>
+    </section>
+    <button onclick="location.href='#menu'"><b>View Menu</b></button>
+
+<hr>
+<!-- Menu Section -->
+<section id="menu" class="menu">
+    <h2>MENU</h2>
+    <div class="menu-item">
+        <img src="../../Music/PLP-WEB/images/burger.jpeg" alt="burger">
+        <p>burger</p>
+    </div>
+    <div class="menu-item">
+        <img src="../../Music/PLP-WEB/images/pancakes.jpeg" alt="pancakes">
+        <p>pancakes</p>
+    </div>
+    <div class="menu-item">
+        <img src="../../Music/PLP-WEB/images/pasta.jpeg" alt="pasta">
+        <p>pasta</p>
+    </div>
+
+</section>
+
+</body>
+</html>
