@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracey Nduta - Portfolio</title>
+    <style>
+        body {
+            background-color: black;
+            color: #FFD700;
+            font-family: 'Itim', cursive;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FFD700;
+            padding: 2px;
+            text-align: center;
+        }
+
+        nav {
+            text-align: right;
+            background-color: #FFD700;
+            height: 19px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-item {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            padding: 15px 15px;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: #FFD700;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        main {
+            text-align: center;
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            width: 30%;
+            margin: 20px;
+            padding: 20px;
+            background-color: #FFD700;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        button {
+            background-color: #FFD700;
+            color: black;
+            padding: 20px;
+            font-size: 25px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #FFD700;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tracey Nduta</h1>
+    </header>
+
+    <nav>
+        <div class="nav-item">
+            <a href="portfolioAssignment.html" class="nav-link">Home</a>
+        </div>
+        <div class="nav-item">
+            <a href="projects.html" class="nav-link">Projects</a>
+        </div>
+        <div class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="card">
+            <p><strong>SKILLS:</strong>Front-End Development, Back-End Development, Full-Stack Development, Version Control, Web APIs, Cross-Browser Compatibility, Security Best Practices, Problem Solving</p>
+        </div>
+
+        <div class="card">
+            <p><strong>EDUCATION:</strong> Degree in Computer Science - Kabarak University (2021)</p>
+            <p>Certification in Web Development - Zalego Academy (2018)</p>
+        </div>
+
+        <div class="card">
+            <p><strong>WHY HIRE ME:</strong>I bring a holistic approach to building digital solutions with expertise in both web and mobile app development. My commitment to high-quality, user-friendly experiences, combined with continuous learning and a strong educational background, ensures innovative and functional projects. Hiring me means gaining a dedicated professional who can contribute effectively to your team.</p>
+            <button onclick="location.href='projects.html'"><b>View my projects</b></button>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Contact:</strong> +254729477677| <strong>Email:</strong>tracey@gmail.com</p>
+        <p><strong>Office Address:</strong> 7 stevens drive ,Nairobi</p>
+    </footer>
+
+</body>
+</html>
