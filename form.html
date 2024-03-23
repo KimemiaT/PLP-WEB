@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            padding: 20px;
+            border: 2px solid #ffff66; /* Faint yellow outline */
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ffffff; /* White border for inputs */
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            color: white;
+        }
+        input[type="submit"],
+        input[type="button"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffff66; /* Faint yellow background */
+            color: black;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover,
+        input[type="button"]:hover {
+            background-color: #ffd700; /* Brighter yellow on hover */
+        }
+        /* Styling for dropdown options */
+        select option {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form id="registrationForm" action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="dob">Date of Birth (DD/MM/YYYY):</label>
+        <input type="text" id="dob" name="dob" required placeholder="DD/MM/YYYY">
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <label for="telephone">Telephone:</label>
+        <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="">Select Course</option>
+            <option value="database">Database</option>
+            <option value="webdevelopment">Web Development</option>
+            <option value="python">Python</option>
+            <option value="django">Django</option>
+            <option value="flutter">Flutter</option>
+        </select>
+
+        <input type="submit" value="Register" id="registerBtn">
+        <input type="button" value="Cancel" id="cancelBtn">
+    </form>
+
+    <script>
+        // JavaScript to handle button actions
+        document.getElementById("registerBtn").onclick = function() {
+            // You can add form validation or other functionality here
+            alert("Registration successful!");
+            document.getElementById("registrationForm").reset(); // Reset the form
+        };
+        
+        document.getElementById("cancelBtn").onclick = function() {
+            // Alert "Registration cancelled!" when the Cancel button is clicked
+            alert("Registration cancelled!");
+            document.getElementById("registrationForm").reset(); // Reset the form
+        };
+    </script>
+</body>
+</html>
